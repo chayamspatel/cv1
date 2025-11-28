@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chaya Patel — Portfolio</title>
+
+  <style>
+    :root{
+      --accent:#6C5CE7;
+      --bg:#0f1724;
+      --card:#0b1120;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071025 0%, #0f1724 100%);
+      color:#e6eef8;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      font-family:inherit;
+    }
+    .container{max-width:1000px;width:100%}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:52px;
+      height:52px;
+      background:linear-gradient(135deg,var(--accent),#00d4ff);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      color:#041028;
+    }
+    nav a{
+      color:var(--muted);
+      margin-left:15px;
+      text-decoration:none;
+    }
+    nav a:hover{color:#fff}
+
+    .grid{
+      display:grid;
+      grid-template-columns:360px 1fr;
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:14px;
+      box-shadow:0 8px 25px rgba(0,0,0,.6);
+    }
+
+    /* SIDEBAR */
+    .photo-wrap{text-align:center}
+    .photo{
+      width:230px;
+      height:230px;
+      border-radius:14px;
+      margin:auto;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.05);
+      background:#111;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .name{font-size:20px;font-weight:600;margin-top:10px}
+    .title{font-size:13px;color:var(--muted)}
+    .bio{margin-top:10px;font-size:14px;color:var(--muted)}
+    .contact{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+    .chip{
+      padding:8px 10px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.03);
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* MAIN */
+    .main-header{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    h1{margin:0;font-size:26px}
+    .lead{color:var(--muted)}
+
+    .skills{display:flex;gap:8px}
+    .skill{
+      background:rgba(255,255,255,0.04);
+      padding:6px 8px;
+      border-radius:7px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .projects{
+      margin-top:15px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .project{
+      background:var(--glass);
+      padding:12px;
+      border-radius:10px;
+    }
+    .project p{font-size:13px;color:var(--muted)}
+
+    .contact-form{
+      margin-top:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    input,textarea{
+      padding:10px;
+      border-radius:8px;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:white;
+    }
+    .cta{
+      background:var(--accent);
+      color:#020014;
+      font-weight:bold;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    footer{text-align:center;color:var(--muted);margin-top:16px}
+
+    @media(max-width:850px){
+      .grid{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="brand">
+    <div class="logo">CP</div>
+    <div>
+      <div class="name">Chaya Patel</div>
+      <div class="title">Frontend Developer • Designer</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="grid">
+
+<!-- SIDEBAR -->
+<aside class="card">
+  <div class="photo-wrap">
+    <div class="photo">
+      <img src="mypic.jpeg">
+    </div>
+    <div class="name">Chaya Patel</div>
+    <div class="title">Web Developer / Hassan</div>
+    <div class="bio">
+      Responsible for designing, developing, and maintaining responsive and user-friendly web applications using modern web technologies.
+    </div>
+    <div class="contact">
+      <div class="chip">✉ chayapatelmschaya@gmail.com</div>
+      <div class="chip">🔗 github.com/chayapatel</div>
+      <div class="chip">💼 linkedin.com/in/yourprofile</div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+<section id="about" class="card">
+  <div class="main-header">
+    <div>
+      <h1>Hi — I'm Chaya Patel</h1>
+      <p class="lead">I build responsive and accessible web applications.</p>
+    </div>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </div>
+
+  <div class="projects" id="projects">
+
+    <div class="project">
+      <h3>Job Portal System</h3>
+      <p>Built a job posting platform using HTML, CSS, JS, PHP, and MySQL with modules for job search and resume upload.</p>
+    </div>
+
+    <div class="project">
+      <h3>Doctor Appointment System</h3>
+      <p>Online system for appointment booking and doctor schedule management.</p>
+    </div>
+
+    <div class="project">
+      <h3>Blog CMS</h3>
+      <p>Developed content management platform with login and post management.</p>
+    </div>
+
+    <div class="project">
+      <h3>Movie Review System</h3>
+      <p>Users can rate and review movies with categories.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact" class="card">
+  <h2>Contact Me</h2>
+  <form class="contact-form" onsubmit="handleSubmit(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button class="cta">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © <span id="year"></span> Chaya Patel • All Rights Reserved
+</footer>
+
+</main>
+
+</div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function handleSubmit(e){
+  e.preventDefault();
+  alert("Message sending disabled (demo only)");
+}
+</script>
+
+</body>
+</html>
